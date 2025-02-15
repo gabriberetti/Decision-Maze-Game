@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui;
+}
+
+h1, h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+#game-canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.form-container, .result-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 450px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.result-container h2 {
+    font-size: 28px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #0A84FF, #5E5CE6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.hidden {
+    display: none;
+}
+
+.controls {
+    position: fixed;
+    top: 70px;  /* Position below the title */
+    left: 20px;  /* Align with title */
+    z-index: 1000;
+}
+
+.control-button {
+    background: #FF3B30;  /* Apple's red color */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(255, 59, 48, 0.3);
+    color: white;  /* Changed to white for better contrast */
+}
+
+.control-button:hover {
+    background: #FF453A;  /* Lighter red for hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 59, 48, 0.4);
+}
+
+input {
+    display: block;
+    margin: 1rem 0;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0071e3;
+}
+
+button {
+    background: #FF3B30;  /* Apple's red color */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #FF453A;  /* Lighter red for hover */
+    transform: translateY(-1px);
+}
+
+#chosen-option {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(0, 122, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+#play-again {
+    background: linear-gradient(90deg, #FF3B30, #FF453A);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
+}
+
+#play-again:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 59, 48, 0.4);
+} 

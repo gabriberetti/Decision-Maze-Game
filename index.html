@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Maze</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="decision-form" class="overlay">
+        <div class="form-container">
+            <h2>Enter Your Decision Options</h2>
+            <form id="options-form">
+                <input type="text" id="option1" placeholder="Option 1 (e.g., Pizza)" required>
+                <input type="text" id="option2" placeholder="Option 2 (e.g., Sushi)" required>
+                <button type="submit">Start Game</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="result" class="overlay hidden">
+        <div class="result-container">
+            <h2>Decision Made!</h2>
+            <p id="chosen-option"></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <div id="camera-controls" class="controls">
+        <button id="toggle-camera" class="control-button">
+            Switch Camera View
+        </button>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="js/MazeGenerator.js"></script>
+    <script src="js/Animal.js"></script>
+    <script src="js/DecisionUI.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
