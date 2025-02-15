@@ -10,3 +10,4 @@ An interactive 3D maze game built with Three.js where a fox helps you make decis
 - Celebration effects when a decision is made
 - Responsive design for both desktop and mobile
 
+## Gabriele Beretti | © 2025
