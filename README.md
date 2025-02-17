@@ -2,6 +2,9 @@
 
 An interactive 3D maze game built with Three.js where a fox helps you make decisions by randomly choosing between two options.
 
+## Website Link 
+https://gabdev-decisionmaze.netlify.app/
+
 ## Features
 
 - Interactive 3D maze with top-down view
